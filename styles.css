@@ -1,0 +1,272 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+
+:root {
+    --base-color: #f9f6f3;
+    --text-color: #000000;
+    --primary-color:#e99e2c;
+    --secondary-color:#007910;
+    --color-1:#afa69d;
+    --color-2:#afa69d;
+    --color-3:#332607;
+}
+
+.main {
+    height: 100vh;                 /* full screen height */
+    background-image: url("images/castle.jpg");
+    background-size: cover;        /* fill the screen */
+    background-position: center;   /* center image */
+    background-repeat: no-repeat;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Crimson-Text, serif;
+    color:var(--text-color);
+
+}
+
+body{
+    padding: 1 em; 
+    background-color: var(--base-color);
+
+}
+
+h1,h2,h3{
+    font-family: Crimson-Text, Playfair Display, serif;
+}
+
+nav{
+    margin: 1 em auto 3em auto;
+    width: min(1000px,100%);
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type:none;
+    gap: 2em;
+}
+
+nav li:first-child{
+    margin-right: auto;
+    font-family: Crimson-Text, Playfair Display, serif;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+header, section{
+    margin: 0;
+    width: 100%;
+    padding: min(2em,15%);
+    
+
+}
+
+.flex-container{
+    display:flex;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap:wrap;
+    gap: 3em; 
+}
+
+.text-container{
+    flex: 0 1 34em; 
+    text-align: center;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+}
+
+h2{
+    font-size: 1.5rem;
+    margin: .75em 0 1em 0;
+}
+
+.cta-button{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    background-color: var(--secondary-color);
+    padding: 0.50em 1.20em;
+    border-radius: .5em;
+    font-weight:600; 
+}
+
+.secondary{
+    background-color: var(--secondary-color);
+}
+
+section{
+    padding: 3em min(2em,15%);
+    background-color: var(--color-2);
+    text-align:center;
+
+}
+
+h2{
+    font-size:2.0rem;
+}
+
+section p{
+    margin-top: 1em;
+    font-size:1.25rem;
+}
+
+.change{
+    color:#ffffff;
+}
+
+section#my-work{
+    background-color: var(--color-3);
+}
+
+.grid-container{
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display:grid;
+    width:100%;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "img-5 img-5 img-1 img-2"
+    "img-5 img-5 img-3 img-4";
+    gap:1em;
+}
+
+.grid-container img{
+    height:100%;
+    width:100%;
+    border-radius:.5em;
+    transition:100ms ease;
+    aspect-ratio: 1 / 1;
+}
+
+.grid-container img:hover{
+    scale:1.05;
+}
+
+footer{
+    padding-bottom:1.5em;
+    text-align:center;
+}
+
+.footer a{
+    margin:0 1em;
+    text-decoration:none;
+    color: var(--text-color);
+}
+
+.footer a:hover{
+    text-decoration:underline;
+}
+
+.sidebar{
+    position: fixed;
+    top:0;
+    right:0;
+    height:100vh;
+    width:250px;
+    z-index:999;
+    background-color: rgba(198, 191, 175, 0.587);
+    backdrop-filter:blur(10px);
+    box-shadow:-10px 0 10px rgba(0,0,0,0.1);
+    display:none;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-start;
+}
+
+.sidebar li{
+    width:100%
+}
+
+.sidebar a{
+    width:100%;
+}
+
+.menu-button{
+    display:none;
+}
+
+
+@media(max-width:988px){
+    header{
+        text-align:center;
+    }
+
+    header .text-container{
+        padding-top: 0;
+    }
+}
+
+@media(max-width:800px){
+    .hideOnMobile{
+        display:none;
+    }
+    .menu-button{
+        display:block;
+    }
+
+}
+
+@media(max-width:400px){
+    .sidebar{
+        width:100%;
+    }
+}
+
+@media(max-width:540px){
+    .cta-button{
+        margin-top:.5em;
+        width:100%;
+    }
+
+    .grid-container{
+        display:flex;
+        flex-direction:column;
+    }
+
+    .text-container p{
+        font-size:1rem;
+    }
+
+    .h2{
+        font-size:1.5rem;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

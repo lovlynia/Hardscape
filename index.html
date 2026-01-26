@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoenix Stoneworks LLC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="main">
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#">✖</a></li>
+                <li><a href="#my-work">Our Work</a></li>
+                <li><a href="gallery.html">Contact</a></li>
+                <li><a href="contact.html">About</a></li>
+            </ul>
+            <ul>
+                <li><a href="index.html">Phoenix Stoneworks LLC</a></li>
+                <li class="hideOnMobile"><a href="#my-work">Our Work</a></li>
+                <li class="hideOnMobile"><a href="gallery.html">Gallery</a></li>
+                <li class="hideOnMobile"><a href="about.html">About</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#">☰</a></li>
+                
+            </ul>
+        </nav>
+        <header>
+        <div class="flex-container">
+        <div class="text-container">
+            <h1>Phoenix Stoneworks </h1>
+            <h2>Building patios since 2010</h2>
+            <a href="" class="cta-button">Follow on Facebook</a>
+            <a href="#my-work" class="cta-button secondary">See my work</a>
+        </div>
+        </div>
+        </header>
+        
+    </header>
+
+    <section>
+        <div class="flex-container">
+            <div class="text-container">
+            <img height="200px" width="200px" src="images/logo.jpg" alt="Phoenix Stoneworks Logo">
+                <h2>My Services </h2>
+                <p> With over a decade in providing the best quality work across Massacusetts and the Connecticut coast. Phoenix Stoneworks LLC continues to value it's craftsmanship and quality to every project<br></p>
+                <h3>We specialize in: </h3>
+                <ul class="adjust">
+                    <li>Patio Construction</li>
+                    <li>Walkways</li>
+                    <li>Driveways</li>
+                    <li>Retaining Walls</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="my-work">
+        <h2 class="change">stoned to perfection</h2>
+        <div class="grid-container">
+            <img style="grid-area:img-1" src="images/patio.jpg" alt="Patio Work">
+            <img style="grid-area:img-2" src="images/walkway.jpg" alt="Walkway Work">
+            <img style="grid-area:img-3" src="images/entrance.jpg" alt="Steps Work">
+            <img style="grid-area:img-4" src="images/steps.jpg" alt="Wall Work">
+            <img style="grid-area:img-5" src="images/pool.jpg" alt="Pool Work">
+        </div>
+        <a href="" class="cta-button">More on Facebook</a>
+    </section>
+
+
+
+
+
+    <footer>
+        <a href="">Facebook</a>
+        <a href="#my-work">Our Work</a>
+        <a href="mailto:fenixabundio@gmail.com">Contact Us</a>
+    </footer>
+
+    <script>
+        function showSidebar(){
+            const sidebar=document.querySelector('.sidebar');
+            sidebar.style.display='flex';
+        }
+        function hideSidebar(){
+            const sidebar=document.querySelector('.sidebar');
+            sidebar.style.display='none';
+        }
+    </script>
+</body>
+
