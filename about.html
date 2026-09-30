@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Phoenix Stoneworks</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body class="about-page">
+
+    <header class="aboutus">
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#">✖</a></li>
+                <li><a href="gallery.html">Our Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <ul>
+                <li><a href="index.html">Phoenix Stoneworks LLC</a></li>
+                <li class="hideOnMobile"><a href="gallery.html">Our Work</a></li>
+                <li class="hideOnMobile"><a href="about.html">About</a></li>
+                <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#">☰</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <section class="border-us">
+
+    <div class="about-left">
+        <div class="spline-container">
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.65/build/spline-viewer.js"></script>
+            <spline-viewer url="https://prod.spline.design/b64U6wK5CF9r8Au9/scene.splinecode"></spline-viewer>
+        </div>
+
+        <div class="about-text">
+            <h2>About Phoenix Stoneworks</h2>
+            <p>
+                Phoenix Stoneworks LLC, founded by Stephanie Abundio, has been building quality stone patios,
+                walkways, and masonry throughout Connecticut for more than a decade — gaining her experience from her family.
+                <br><br>
+                Phoenix Stoneworks takes pride in delivering durable craftsmanship and attention to detail on every project,
+                working closely with homeowners to create stonework that enhances both the beauty and value of their property.
+            </p>
+            <a href="contact.html" class="cta-button secondary">Contact Us</a>
+        </div>
+    </div>
+
+    <div class="about-right"></div>
+
+</section>
+
+    <footer>
+        <a href="index.html">Home</a>
+        <a href="mailto:youremail@gmail.com">Contact Us</a>
+        <a href="about.html">About</a>
+    </footer>
+
+ <script>
+        function showSidebar(){
+            const sidebar=document.querySelector('.sidebar');
+            sidebar.style.display='flex';
+        }
+        function hideSidebar(){
+            const sidebar=document.querySelector('.sidebar');
+            sidebar.style.display='none';
+        }
+
+        
+    </script>
+
+    <img src="images/ct3.jpg" class="about-picture" alt="old saybrook">
+
+   
+
+
+</body>
+</html>
